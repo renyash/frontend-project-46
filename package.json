@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/renyash/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/renyash/frontend-project-46/actions)",
-  "main": "index.js",
+  "main": "src/gendiff.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +16,8 @@
     "commander": "^10.0.0",
     "eslint": "^8.38.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5"
+    "eslint-plugin-import": "^2.27.5",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.22"
   }
 }
