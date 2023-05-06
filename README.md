@@ -5,4 +5,5 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/092127cbe82dadb84f80/test_coverage)](https://codeclimate.com/github/renyash/frontend-project-46/test_coverage)
 
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![example workflow](https://github.com/renyash/frontend-project-46/actions/workflows/nodejs.yml/badge.svg
+)
