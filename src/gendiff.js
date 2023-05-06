@@ -15,13 +15,13 @@ const mknode = (key, value, type, oldValue = null) => ({
   oldValue,
 });
 
-const getDiff = (parsedDataFile1, parsedDataFile2) => {
+const getDiff = () => {
   const keys1 = Object.keys(parsedDataFile1);
   const keys2 = Object.keys(parsedDataFile2);
 
   const unitedKeys = _.union(keys1, keys2);
   const sortedKeys = _.sortBy(unitedKeys);
-  
+
   console.log(`Here all unique keys found: ${unitedKeys}`);
   console.log(`Sorted keys: ${sortedKeys}`);
 
