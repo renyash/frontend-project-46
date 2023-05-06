@@ -4,7 +4,7 @@
   "description": "[![Actions Status](https://github.com/renyash/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/renyash/frontend-project-46/actions)",
   "main": "src/gendiff.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest"
   },
   "author": "renyash",
   "type": "module",
