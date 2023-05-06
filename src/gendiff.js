@@ -15,15 +15,12 @@ const mknode = (key, value, type, oldValue = null) => ({
   oldValue,
 });
 
-const getDiff = () => {
+const genDiff = () => {
   const keys1 = Object.keys(parsedDataFile1);
   const keys2 = Object.keys(parsedDataFile2);
 
   const unitedKeys = _.union(keys1, keys2);
   const sortedKeys = _.sortBy(unitedKeys);
-
-  console.log(`Here all unique keys found: ${unitedKeys}`);
-  console.log(`Sorted keys: ${sortedKeys}`);
 
   const nodes = sortedKeys.map((key) => {
     const value1 = parsedDataFile1[key];
@@ -49,7 +46,7 @@ const renderTree = (nodes) => {
   });
   return `{\n${tree.join('\n')} \n}`;
 };
-const nodes = getDiff(parsedDataFile1, parsedDataFile2);
+const nodes = genDiff(parsedDataFile1, parsedDataFile2);
 console.log(renderTree(nodes));
 
-export default getDiff;
+export default genDiff;
