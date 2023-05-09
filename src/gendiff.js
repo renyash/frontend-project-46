@@ -30,23 +30,21 @@ const genDiff = () => {
     if (parsedDataFile1[key] !== parsedDataFile2[key]) return mknode(key, value1, 'updated', value2);
     return mknode(key, value1, 'unchanged');
   });
-  return nodes;
-};
 
-const renderTree = (nodes) => {
   const tree = nodes.map((node) => {
     const { key, value, oldValue } = node;
     switch (node.type) {
-      case 'added': return `\t+ ${key}: ${value}`;
-      case 'deleted': return `\t- ${key}: ${value}`;
-      case 'updated': return `\t- ${key}: ${oldValue}\n\t+ ${key}: ${value}`;
-      case 'unchanged': return `\t  ${key}: ${value}`;
+      case 'added': return `+ ${key}: ${value}`;
+      case 'deleted': return `- ${key}: ${value}`;
+      case 'updated': return `- ${key}: ${oldValue}\n+ ${key}: ${value}`;
+      case 'unchanged': return `  ${key}: ${value}`;
       default: throw new Error('something went wrong... :(');
     }
   });
-  return `{\n${tree.join('\n')} \n}`;
+  return `{\n${tree.join('\n')}\n}`;
 };
-const nodes = genDiff(parsedDataFile1, parsedDataFile2);
-console.log(renderTree(nodes));
+
+// const nodes = genDiff(parsedDataFile1, parsedDataFile2);
+// console.log(nodes);
 
 export default genDiff;
